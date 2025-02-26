@@ -1,75 +1,119 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Links</title>
-        <style>
-            body{
-                background-color: lightblue;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Designing Links</title>
+    <style>
+        /* General Styling */
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
+        h1, h2 {
+            font-style: oblique;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-            }
-            p {
-                font-family: Arial, sans-serif;
-                font-style: oblique;
-                font-weight: bold;
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
 
+        /* Navigation List */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+        }
+
+        ul li {
+            margin: 10px;
+        }
+
+        ul li a {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            padding: 12px 20px;
+            display: inline-block;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            transition: all 0.4s ease;
+        }
+
+        /* Hover Effects */
+        ul:hover li a {
+            color: #ff5757;
+        }
+
+        ul:hover li a:not(:hover) {
+            opacity: 0.5;
+            filter: blur(1px);
+            transform: scale(0.95);
+        }
+
+        ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            body {
+                background: linear-gradient(to right, #ff4e50, #fc913a);
             }
-            h1 {
-                font-family: Arial, sans-serif;
-                font-style: oblique;
-                font-weight: bold;
-                text-align: center;
+
+            p, h1, h2, ul li a {
+                font-size: 14px !important;
             }
-            h2 {
-                font-family: Arial, sans-serif;
-                font-style: oblique;
-                font-weight: bold;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
             }
-            a {
-                font-family: Arial, sans-serif;
-                font-style: oblique;
-                font-weight: bold;
-                text-decoration: none;
-                color: black;
+
+            ul li {
+                margin: 5px 0;
             }
-            a:hover {
-                color: red;
+
+            ul li a:hover {
+                color: cyan !important;
+                filter: drop-shadow(1px 1px 5px black) !important;
             }
-            @media screen and (max-width: 600px) {
-                body {
-                    background-color: lightgreen;
-                }
-                
-                
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Links</h1>
-        <h2>Web Designing Links</h2>
-        <p>Click on the links below to view the pages.</p>
-        <p>Webpage to form </p>
-        <a href="From.html">From.html</a><br>
-        <p>Webpage to External css html page</p>
-        <a href="External.html">External.html</a><br>
-        <p>Webpage to Internal css html page</p>
-        <a href="Internal.html">Internal.html</a><br>
-        <p>Webpage to details html page</p>
-        <a href="details.html">details.html</a><br>
-        <p>Webpage to Index html page</p>
-        <a href="Index.html">index.html</a><br>
-        <p>Webpage to External css page</p>
-        <a href="External.css">External.css</a><br>
-        <p>Webpage to Lab 1 html page</p>
-        <a href="Lab1.html">Lab1.html</a><br>
-        <p>Webpage to Lab 2 html page</p>
-        <a href="Lab2.html">Lab2.html</a><br>
-        <p>Webpage to Lab 3 html page</p>
-        <a href="Lab3.html">Lab3.html</a><br>
-        <p>Webpage to Lab 4 html page</p>
-        <a href="Lab4.html">Lab4.html</a><br>
-        <p>Webpage to Lab 5 html page</p>
-        <a href="Lab5.html">Lab5.html</a><br>
-        <p>Webpage to Lab 6 html page</p>
-    </body>
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Designing Links</h1>
+    <h2>Click on the links below to view the pages.</h2>
+
+    <ul>
+        <li><a href="Lab1.html">Lab 1</a></li>
+        <li><a href="Lab2.html">Lab 2</a></li>
+        <li><a href="Lab3.html">Lab 3</a></li>
+        <li><a href="Lab4.html">Lab 4</a></li>
+        <li><a href="Lab5.html">Lab 5</a></li>
+        <li><a href="Form.html">Lab 6</a></li>
+        <li><a href="External.html">Lab7</a></li>
+        <li><a href="External.css">External CSS File</a></li>
+        <li><a href="Internal.html">Internal CSS</a></li>
+        <li><a href="details.html">Details Page</a></li>
+        <li><a href="Index.html">Index Page</a></li>
+    </ul>
+</body>
 </html>
