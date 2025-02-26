@@ -4,6 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyperlinks and Images</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        h2 {
+            color: green;
+        }
+        p {
+            color: red;
+        }
+        img {
+            border: 1px solid black;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: green;
+            transition: 0.5s;
+            filter: contrast(1.5);
+        }
+        @media screen and (max-width: 600px) {
+            h1 {
+                color: red;
+            }
+            h2 {
+                color: green;
+            }
+            p {
+                color: blue;
+            }
+            img {
+                border: 1px solid red;
+            }
+            a {
+                color: purple;
+            }
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to My Webpage</h1>
@@ -21,10 +62,7 @@
     
     <h2>Images</h2>
     <p>
-        <img src="https://via.placeholder.com/150" alt="Placeholder Image" title="Placeholder Image">
-    </p>
-    <p>
-        <img src="https://via.placeholder.com/200" alt="Another Placeholder Image" title="Another Placeholder Image">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg">
     </p>
     
     <h2 id="internal-section">Internal Section</h2>
