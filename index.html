@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Designing Links</title>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker Registered');
+                    console.log(registration);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker Registration Failed');
+                    console.log(error);
+                });
+        }
+
+    </script>
     <style>
         /* General Styling */
         body {
@@ -57,22 +71,21 @@
 
         /* Hover Effects */
         ul:hover li a {
-            color: #ff5757;
+            color: offwhite;
         }
 
         ul:hover li a:not(:hover) {
-            opacity: 0.5;
+            opacity: 0.8;
             filter: blur(1px);
             transform: scale(0.95);
         }
 
         ul li a:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.1);
+            transform: scale(1.2);
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
         }
 
-        /* Responsive Design */
         @media screen and (max-width: 600px) {
             body {
                 background: linear-gradient(to right, #ff4e50, #fc913a);
@@ -115,6 +128,8 @@
         <li><a href="details.html">Details Page</a></li>
         <li><a href="Index.html">Index Page</a></li>
         <li><a href="Lab8.html">Lab 8</a></li>
+        <li><a href="Lab9.html">Lab 9</a></li>
+        <li><a href="Lab9_2.html">Lab 9.2</a></li>
     </ul>
 </body>
 </html>
