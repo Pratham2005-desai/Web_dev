@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Array & Object Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      color: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    h1 {
+      color: #4dd0e1;
+      text-align: center;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      color: #bbdefb;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #4dd0e1;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Practical 9</h1>
+    <div class="section" id="array-section">
+      <h2>Array Operations</h2>
+      <ul id="array-output"></ul>
+    </div>
+    <div class="section" id="object-section">
+      <h2>Object Data</h2>
+      <ul id="object-output"></ul>
+    </div>
+  </div>
+
+  <script>
+    let x = ["apple", "banana", "cherry"];
+    const output = document.getElementById("array-output");
+
+    function logArray(action, arr) {
+      const li = document.createElement("li");
+      li.textContent = `${action}: [${arr.join(", ")}]`;
+      output.appendChild(li);
+    }
+
+    logArray("Initial", x);
+    x.push("orange");
+    logArray("Push 'orange'", x);
+    x.pop();
+    logArray("Pop", x);
+    logArray("Join with ' - '", [x.join(" - ")]);
+    x.shift();
+    logArray("Shift", x);
+    x.unshift("kiwi");
+    logArray("Unshift 'kiwi'", x);
+    x.splice(1, 0, "mango", "grape");
+    logArray("Splice in 'mango', 'grape' at index 1", x);
+    x.sort();
+    logArray("Sort", x);
+    x.reverse();
+    logArray("Reverse", x);
+
+    // Object section
+    let y = { name: "Pratham", age: 20, city: "Valsad" };
+    const objOutput = document.getElementById("object-output");
+
+    for (let key in y) {
+      const li = document.createElement("li");
+      li.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${y[key]}`;
+      objOutput.appendChild(li);
+    }
+  </script>
+</body>
+</html>
