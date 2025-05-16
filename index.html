@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web Designing Links</title>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(function(registration) {
-                    console.log('Service Worker Registered');
-                    console.log(registration);
-                })
-                .catch(function(error) {
-                    console.log('Service Worker Registration Failed');
-                    console.log(error);
-                });
-        }
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-    </script>
     <style>
         /* General Styling */
         body {
@@ -67,11 +56,12 @@
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
             transition: all 0.4s ease;
+            cursor: pointer;
         }
 
         /* Hover Effects */
         ul:hover li a {
-            color: offwhite;
+            color: #f8f8ff; /* fixed from offwhite */
         }
 
         ul:hover li a:not(:hover) {
@@ -84,6 +74,20 @@
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.2);
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Active Link Style */
+        ul li a.active {
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+            transform: scale(1.2);
+        }
+
+        /* Focus style for accessibility */
+        ul li a:focus {
+            outline: 2px solid cyan;
+            outline-offset: 3px;
         }
 
         @media screen and (max-width: 600px) {
@@ -110,6 +114,36 @@
             }
         }
     </style>
+
+    <script>
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker Registered');
+                    console.log(registration);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker Registration Failed');
+                    console.log(error);
+                });
+        }
+
+        // Highlight active link on click
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('ul li a');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    // Remove active class from all links
+                    links.forEach(l => l.classList.remove('active'));
+
+                    // Add active class to clicked link
+                    event.currentTarget.classList.add('active');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Web Designing Links</h1>
@@ -121,20 +155,38 @@
         <li><a href="Lab3.html">Lab 3</a></li>
         <li><a href="Lab4.html">Lab 4</a></li>
         <li><a href="Lab5.html">Lab 5</a></li>
-        <li><a href="From.html">Lab 6</a></li>
-        <li><a href="External.html">Lab7</a></li>
+        <li><a href="Form.html">Lab 6</a></li>  <!-- Fixed typo from From.html -->
+        <li><a href="External.html">Lab 7</a></li> <!-- Added a space between Lab and 7 -->
         <li><a href="External.css">External CSS File</a></li>
         <li><a href="Internal.html">Internal CSS</a></li>
         <li><a href="details.html">Details Page</a></li>
+        <li><a href="Index.html">Index Page</a></li>
         <li><a href="Lab8.html">Lab 8</a></li>
         <li><a href="Lab9.html">Lab 9</a></li>
-        <li><a href="lab10.html">Lab 10</a></li>
+        <li><a href="Lab10.html">Lab 10</a></li>
         <li><a href="Lab11.html">Lab 11</a></li>
         <li><a href="Lab12.html">Lab 12</a></li>
         <li><a href="Lab13.html">Lab 13</a></li>
         <li><a href="Lab14.html">Lab 14</a></li>
-        <li><a href="LAb15.html">Lab 15</a></li>
+        <li><a href="Lab15.html">Lab 15</a></li>
         <li><a href="Lab16.html">Lab 16</a></li>
+        <li><a href="Lab17.html">Lab 17</a></li>
+        <li><a href="Lab18.html">Lab 18</a></li>
+        <li><a href="Lab19.html">Lab 19</a></li>
+        <li><a href="Lab20.html">Lab 20</a></li>
+        <li><a href="Lab21.html">Lab 21</a></li>
+        <li><a href="Lab22.html">Lab 22</a></li>
+        <li><a href="Lab23.html">Lab 23</a></li>
+        <li><a href="Lab24.html">Lab 24</a></li>
+        <li><a href="Lab25.html">Lab 25</a></li>
+        <li><a href="Lab26.html">Lab 26</a></li>
+        <li><a href="Lab27.html">Lab 27</a></li>
+        <li><a href="Lab28.html">Lab 28</a></li>
+        <li><a href="Lab29.html">Lab 29</a></li>
+        <li><a href="Lab30.html">Lab 30</a></li>
+        <li><a href="Lab31.html">Lab 31</a></li>
+        <li><a href="Lab32.html">Lab 32</a></li>
+        <li><a href="Lab33.html">Lab 33</a></li>
     </ul>
 </body>
 </html>
