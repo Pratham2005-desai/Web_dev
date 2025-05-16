@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Elements Display</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+      margin: 0;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .element-box {
+      background-color: #bbdefb;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Array Elements</h2>
+  <div id="output"></div>
+  <button onclick="showArrayElements()">Show Elements</button>
+
+  <script>
+    function showArrayElements() {
+      const items = [42, "Hello", 99, "JavaScript", "World"];
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = ""; // Clear previous output
+      
+      for (let i = 0; i < items.length; i++) {
+        const div = document.createElement("div");
+        div.className = "element-box";
+        div.textContent = items[i];
+        outputDiv.appendChild(div);
+      }
+    }
+  </script>
+
+</body>
+</html>
